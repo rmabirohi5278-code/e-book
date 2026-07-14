@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://e7.pngegg.com/pngimages/377/149/png-clipart-digital-library-bookmobile-beautiful-illustration-library-gadget-text-thumbnail.png">
+  <title>e-books Service</title>
+  <style>
+    body { 
+      margin: 0; 
+      padding: 0; 
+      font-family: Arial, Helvetica, sans-serif; 
+      background-color: rgb(227, 253, 249); 
+    }
+    
+    header { 
+      width: 100%; 
+      height: 75px; 
+      background-color: rgb(5, 36, 75); 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      padding: 0 30px; 
+      box-sizing: border-box; 
+    }
+    
+    #logo { 
+      height: 55px; 
+      width: auto; 
+      border-radius: 60%; 
+    }
+    
+    header input[type="search"] { 
+      width: 350px; 
+      height: 35px; 
+      padding: 0 15px; 
+      border-radius: 15px; 
+      border: 1px solid #ccc; 
+      box-sizing: border-box; 
+    }
+    
+    ul.dashboard { 
+      display: flex; 
+      align-items: center; 
+      list-style-type: none; 
+      margin: 0; 
+      padding: 0; 
+      gap: 10px; 
+    }
+    
+    ul.dashboard li a { 
+      text-decoration: none; 
+      color: whitesmoke; 
+      font-weight: bold; 
+      font-size: 15px; 
+      display: block; 
+      padding: 18px 15px; 
+      border-radius: 6px; 
+    }
+    
+    ul.dashboard li a:hover { 
+      background-color: rgb(0, 0, 8); 
+    }
+    
+    ul.dashboard li a img { 
+      display: block; 
+      border-radius: 50%; 
+    }
+    
+    h1 { 
+      margin-top: 50px; 
+      text-align: center; 
+      font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; 
+      font-weight: bolder; 
+      text-decoration: wavy; 
+    }
+    
+    #home { 
+      margin-top: 30px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      padding-left: 30px; 
+      padding-right: 30px; 
+      gap: 50px; 
+    }
+    
+    #home .lorem { 
+      width: 60%; 
+      text-align: justify; 
+      font-family: 'Lucida Grande','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif; 
+      font-size: larger; 
+    }
+    
+    #home .ebook { 
+      width: 40%; 
+    }
+    
+    #home .ebook img { 
+      width: 100%; 
+      max-width: 500px; 
+      height: auto; 
+      border-radius: 20px;
+    }
+    
+    .collections { 
+      width: 100%; 
+      height: 450px; 
+      position: relative; 
+      display: flex; 
+      justify-content: flex-start; 
+      gap: 10px; 
+      box-sizing: border-box; 
+      overflow: visible; 
+      padding: 0 30px;
+    } 
+    
+    .collections [class^="col"] { 
+      position: relative; 
+      width: 250px; 
+      height: 550px; 
+    }
+    
+    .collections .col5 { 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    } 
+    
+    .collections .col5 p { 
+      margin: 0px 0px 10px 0px; 
+      font-size: 60px; 
+      font-weight: bold;
+      line-height: 1;
+      text-align: center; 
+    } 
+    
+    .collections .col5 h6 {
+      margin: 0px; 
+      padding: 0px; 
+      font-family: 'Arial Narrow', 'Franklin Gothic Medium', Arial, sans-serif; 
+      font-size: large; 
+      font-weight: 600; 
+      text-align: center; 
+    }
+    
+    .collections img { 
+      margin-top: 15px; 
+      padding: 10px; 
+      width: 200px; 
+      height: auto; 
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 35px;
+    } 
+    
+    .collections h5 { 
+      margin: 0px 0px 5px 0px;
+      padding: 0px; 
+      font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif; 
+      font-size: medium; 
+      font-weight: 800; 
+      font-display: block; 
+      text-align: center; 
+    } 
+    
+    .collections h6 { 
+      margin: 0px; 
+      padding: 0px; 
+      font-family: 'Arial Narrow', 'Franklin Gothic Medium', Arial, sans-serif; 
+      font-size: large; 
+      font-weight: 600; 
+      text-align: center; 
+    }
+    .about p{
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: larger;
+        font-weight: 800;
+    }
+    #contact_us{
+        background-color: rgb(5, 36, 75);
+    }
+    #contact_us a{
+        text-decoration: none;
+        text-align: center;
+        justify-content: center;
+    }
+    #contact_us p{
+        text-align: center;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img id="logo" src="https://static.vecteezy.com/system/resources/previews/006/207/603/non_2x/vintage-library-logo-with-book-and-classic-ornament-vector.jpg" alt="logo">
+    <input type="search" placeholder="🔍 Search Books">
+    <ul class="dashboard">
+      <li><a href="#homie">Home</a></li>
+      <li><a href="#your_books">Your Books</a></li>
+      <li><a href="#about_us">About Us</a></li>
+      <li><a href="#contact_us">Contact Us</a></li>
+      <li>
+        <a href="#profile">
+          <img src="https://www.freeiconspng.com/uploads/am-a-19-year-old-multimedia-artist-student-from-manila--21.png" alt="profile" width="32px" height="32px">
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <h1 id="homie">HOME</h1>
+    
+    <section id="home">
+      <div class="lorem">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nobis et pariatur possimus placeat odio reiciendis iusto est voluptate praesentium, molestiae repellendus. Temporibus assumenda impedit earum blanditiis expedita quidem odit?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati minima eligendi veniam! Amet quibusdam nisi at. Iusto mollitia ea fugiat maxime! Iure commodi delectus a, deserunt rerum asperiores ullam vero!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure facilis assumenda amet laborum optio eligendi! Iste cumque veritatis sint nostrum. Nisi dicta natus dolorum maxime quidem voluptatum, commodi voluptates officiis?</p>
+      </div>
+      <div class="ebook">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJfo-jcpBslctn2L0a0CKsWQOgCi8z0kWozjjfmtFRduAd6zwEIUB-8sLO&s=10" alt="e-books">
+      </div>
+    </section>
+
+    <h1 id="your_books">Your Books</h1>
+    
+    <div class="collections">
+      <div class="col1">
+        <img src="https://m.media-amazon.com/images/I/61Ktyy7KymL._AC_UF1000,1000_QL80_.jpg" alt="The Art of Being Alone">
+        <h5>Book Name: The Art of Being Alone</h5>
+        <h6>Author Name: Renuka Gavrani</h6>
+      </div>
+      <div class="col2">
+        <img src="https://m.media-amazon.com/images/I/71XfSyo8SBL._UF1000,1000_QL80_.jpg" alt="Can We Be Strangers Again">
+        <h5>Book Name: Can We Be Strangers Again</h5>
+        <h6>Author Name: Shrejeet Shandilya</h6>
+      </div>
+      <div class="col3">
+        <img src="https://m.media-amazon.com/images/I/817HaeblezL.jpg" alt="Atomic Habits">
+        <h5>Book Name: Atomic Habits</h5>
+        <h6>Author Name: James Clear</h6>
+      </div>
+      <div class="col4">
+        <img src="https://m.media-amazon.com/images/I/71BgEIFh9bL._UF1000,1000_QL80_.jpg" alt="You Were Never Meant to Read This">
+        <h5>Book Name: You Were Never Meant to Read This</h5>
+        <h6>Author Name: Shrejeet Shandilya</h6>
+      </div>
+      <div class="col5">
+        <p>+</p>
+        <h6>Add more collections</h6>
+      </div>
+    </div>
+
+    <div class="about">
+      <h1 id="about_us">About Us</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique est magni recusandae nihil. Inventore, aliquam! Impedit facere similique, illo quidem ratione reiciendis delectus, ipsa sint ipsam, quas itaque doloremque qui.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem autem obcaecati laboriosam architecto quisquam sunt, beatae, numquam recusandae quas corrupti aperiam ut ratione aliquam nemo, quos tempore corporis culpa!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime autem, ratione ullam iusto praesentium obcaecati rem beatae officia minima illum earum repellendus eligendi. Assumenda doloremque quae dolorum eius rerum debitis.</p>
+    </div>
+    <br>
+    <hr>
+    <br><br><br>
+  </main>
+<footer id="contact_us">
+    <br><br><br>
+    <a href="mailto:ebooks2705@gmail.com">E-mail   |</a>
+    <a href="callto:890055">    Contact us</a>
+    <p>&copy; 2026 e-books Service. All rights reserved.</p>
+</footer>
+</body>
+</html>
